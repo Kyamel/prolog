@@ -17,3 +17,9 @@ factors(N, K, XS) :-
     K =< N,
     K1 is K + 1,
     factors(N, K1, XS).
+
+prime(N) :-
+    integer(N),
+    N > 1,
+    factors(N, XS),
+    XS = [N].
